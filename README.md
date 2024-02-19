@@ -8,6 +8,7 @@ Welcome to the Kids Dress Collection web application! This application is built 
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshot](#Screenshot)
 - [Contributing](#contributing)
 - [License](#license)
 
