@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid's Dress Collection - Sign Up</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            background-color: #ffccff; /* Light pink background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            width: 300px;
+            text-align: center; /* Center align content */
+        }
+
+        h2 {
+            color: #ff66cc; /* Pink heading color */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666; /* Dark gray text color */
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #ff66cc; /* Pink button color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px; /* Larger padding */
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #ff3399; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <form action="{{url_for('signup')}}" method="post">
+        <h2>Kid's Dress Collection</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+</body>
+</html>

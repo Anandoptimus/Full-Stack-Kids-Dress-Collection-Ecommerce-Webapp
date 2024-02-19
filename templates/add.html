@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Kids Product</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffcc99; /* Light peach background */
+        }
+
+        header {
+            background-color: #66ccff; /* Light blue header */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #66ccff; /* Light blue button */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #3399cc; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Add Kids Product</h1>
+    </header>
+
+    <form method="post" action="{{url_for('add')}}">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <label for="productImage">Product Image URL:</label>
+        <input type="text" id="productImage" name="productImage" required>
+
+        <label for="productPrice">Product Price:</label>
+        <input type="text" id="productPrice" name="productPrice" required>
+
+
+        <label for="productDiscount">Product Discount:</label>
+        <input type="text" id="productDiscount" name="productDiscount">
+
+        <label for="productDescription">Product Description:</label>
+        <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+
+
+        <button type="submit">Add Kids Product</button>
+    </form>
+
+</body>
+</html>

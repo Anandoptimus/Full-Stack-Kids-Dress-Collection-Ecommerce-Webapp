@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Dress Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec; /* Light pink background */
+            padding-bottom: 80px; /* Adjusted padding for the footer */
+        }
+
+        header {
+            background-color: #77b5fe; /* Light blue header */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header button {
+            background-color: #77b5fe; /* Light blue button */
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header button:hover {
+            background-color: #4c8bf5; /* Darker blue on hover */
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #ffcc99; /* Light orange background */
+            border: 1px solid #ff6f69; /* Coral border */
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .price {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .discount {
+            color: #ff6f69; /* Coral color for discounts */
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        button.add-to-cart {
+            background-color: #77b5fe; /* Light blue button */
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button.add-to-cart:hover {
+            background-color: #4c8bf5; /* Darker blue on hover */
+        }
+
+        footer {
+            background-color: #77b5fe; /* Light blue footer */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Add product button styling */
+        button.add-product {
+            background-color: #77b5fe;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 0 8px 0 0;
+            font-size: 16px;
+            position: fixed;
+            bottom: 80px; /* Adjusted position */
+            right: 0;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button.add-product:hover {
+            background-color: #4c8bf5; /* Darker blue on hover */
+        }
+
+        /* Add a "+" icon to the Add Product button */
+        button.add-product::before {
+            content: '\002B'; /* Unicode character for plus symbol */
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kids Dress Collection</h1>
+        <button class="add-to-cart" onclick="window.location.href='{{ url_for('signup')}}'">Sign Up</button>
+    </header>
+
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" style="width: 100%;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="active" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+              <div class="carousel-item">-->
+                <!-- Placeholder content for the second slide -->
+                <img src="https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p08_event2_clubday_sitewide_desktop1708173506210.webp" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <!-- Placeholder content for the second slide -->
+                <img src="https://cdn.fcglcdn.com/brainbees/banners/desktop_goodness_feeding_27_oct_week4_1402241708095260230.webp" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item active">
+                <!-- Placeholder content for the third slide -->
+                <img src="https://cdn.fcglcdn.com/brainbees/banners/mktng_nonapps_base_babycare_hp_19feb241708165254374.webp" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section>
+        <!-- Placeholder for product data -->
+        {%for i in query:%}
+        <div class="product">
+            <img src="{{i.img}}" alt="Product 1" style="width: 100%; height: auto;">
+            <h2>{{i.name}}</h2>
+            <p>{{i.desc}}</p>
+            <p class="price">Rs{{i.price}} <span class="discount">({{i.disc}}% off.)</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        {%endfor%}
+        <!-- Add more product divs as needed -->
+
+    </section>
+
+    <!-- Add Product button with icon -->
+    <button class="add-product" onclick="window.location.href='{{ url_for('add')}}'">Add Product</button>
+
+    <footer>
+        &copy; 2024 Kids Toy Store. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
